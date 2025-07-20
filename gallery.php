@@ -7,7 +7,7 @@ include './inc/images.inc.php';
 
 <div class="gallery-container">
     <?php foreach ($imageTitles as $image => $title): ?>
-        <a href="image.php?image=<?= http_build_query(['image' => $image]); ?>" class="gallery-item">
+        <a href="image.php?<?= http_build_query(['image' => $image]); ?>" class="gallery-item">
             <h3><?= escape($title); ?></h3>
             <img src="<?= "./images/" . rawurlencode($image); ?>" alt="<?= rawurlencode($title); ?>" />
         </a>
